@@ -1,12 +1,14 @@
-steps:
-- name: maven:3-jdk-8
-   entrypoint: mvn
-   args: ['test']
+   steps:
+   - name: maven:3-jdk-8
+    entrypoint: mvn
+    args: ['--version']
+  
+   steps:
+   - name: maven:3-jdk-8
+     entrypoint: mvn
+     args: ['test']
    
- steps:
+steps:
 - name: gcr.io/cloud-builders/docker
   args: ['build', '-t', 'gcr.io/fiery-buttress-339215/cloud-build', '--build-arg=JAR_FILE=target/build-artifact', '.']
 images: ['gcr.io/fiery-buttress-339215/cloud-build']
-
- options:
- logging: CLOUD_LOGGING_ONLY
