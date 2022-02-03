@@ -10,5 +10,5 @@
   
 steps:
 - name: gcr.io/cloud-builders/docker
-  args: ['build', '-t', 'gcr.io/fiery-buttress-339215/cloud-spanner-build', '--build-arg=JAR_FILE=target/build-artifact', '.']
-images: ['gcr.io/fiery-buttress-339215/cloud-spanner-build']
+  args: ['build', '-t', 'gcr.io/continual-block-339821/cloud-spanner-build', '--build-arg=JAR_FILE=target/build-artifact', '.']
+images: ['gcr.io/continual-block-339821/cloud-spanner-build']
